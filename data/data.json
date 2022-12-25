@@ -1,0 +1,12 @@
+{
+  "status_code": 200,
+  "data": {
+    "{name:AIRTM,nameAlt:AIRTM,imgSrc:/img/airtm-logo.svg,imgTitle:logo-airtm,title:AIRTM,update:,price:Bs = 0,00}": 1,
+    "{name:BCV,nameAlt:BCV (Oficial),imgSrc:/img/BCV.png,imgTitle:logo-bcv,title:BCV (Oficial),update:,price:Bs = 16,566}": 1,
+    "{name:Binance P2P,nameAlt:Binance P2P,imgSrc:/img/binance-logo.svg,imgTitle:logo-binance,title:Binance P2P,update:,price:Bs = 17,800}": 1,
+    "{name:Dolar Today,nameAlt:@DolarToday,imgSrc:/img/logo_dt.webp,imgTitle:logo-dolartoday,title:@DolarToday,update:,price:Bs = 17,60}": 1,
+    "{name:Monitor Dolar,nameAlt:@MonitorDolarWeb,imgSrc:/img/logo-monitor-dolar.svg,imgTitle:logo-mdv,title:@MonitorDolarWeb,update:,price:Bs = 17,53}": 1,
+    "{name:Paralelo VIP,nameAlt:@EnParaleloVzlaVip,imgSrc:/img/logo_paralelo.webp,imgTitle:logo-enparaleloVIP,title:@EnParaleloVzlaVip,update:,price:Bs = 17,43}": 1,
+    "{name:Paralelo,nameAlt:@EnParaleloVzla3,imgSrc:/img/logo_paralelo.webp,imgTitle:logo-enparalelo,title:@EnParaleloVzla3,update:,price:Bs = 17,45}": 1
+  }
+}
