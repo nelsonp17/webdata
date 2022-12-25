@@ -24,10 +24,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Run App
+        run: go run main.go
       - name: Setup Go environment
         uses: actions/setup-go@v3.5.0
         with:
-          # The Go version to download (if necessary) and use. Supports semver spec and ranges.
           go-version: 1.17
       - name: Checkout
         uses: actions/checkout@v3
@@ -40,9 +41,6 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-      - name: Run App
-        run: go run main.go
-
   # Deployment job
   deploy:
     environment:
