@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run App
-        run: go run ../main.go
+        run: go run ../../main.go
       - name: Setup Go environment
         uses: actions/setup-go@v3.5.0
         with:
