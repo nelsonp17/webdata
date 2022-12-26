@@ -4,7 +4,7 @@ import (
 	//"fmt"
 	"github.com/gorilla/mux"
 	//"github.com/Nelson2017-8/webdata/app/controllers"
-	//"log"
+	"log"
 	"net/http"
 	"time"
 )
