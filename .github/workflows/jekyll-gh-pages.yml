@@ -24,8 +24,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run App
-        run: go run ../../main.go
       - name: Setup Go environment
         uses: actions/setup-go@v3.5.0
         with:
@@ -41,6 +39,8 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+      - name: Run App
+        run: go run main.go
   # Deployment job
   deploy:
     environment:
