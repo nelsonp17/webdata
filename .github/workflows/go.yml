@@ -33,21 +33,4 @@ jobs:
     - name: HTTP Server Action
       uses: Eun/http-server-action@v1.0.6
       with:
-        directory: ./...
         port: 3000
-        # Content Types to serve
-        content-types: # optional, default is {
-          "appcache": "text/cache-manifest"
-          "css": "text/css"
-          "gif": "image/gif"
-          "html": "text/html"
-          "ico": "image/x-icon"
-          "jpeg": "image/jpeg"
-          "jpg": "image/jpeg"
-          "js": "text/javascript"
-          "json": "application/json"
-          "png": "image/png"
-          "txt": "text/plain"
-          "xml": "text/xml"
-        }
-
