@@ -47,7 +47,8 @@ jobs:
         uses: alinz/script.go@v1.0.1
         with:
           # path to go script
-          paths: ./main.go
+          paths: main.go
+          workspace: ./
   # Deployment job
   deploy:
     environment:
