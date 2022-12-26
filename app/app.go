@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	//"github.com/Nelson2017-8/webdata/app/controllers"
-	"log"
+	_"log"
 	"net/http"
-	"time"
+	_"time"
 )
 
 func Init() {
@@ -24,16 +24,18 @@ func Init() {
 	// pero podría ser algo como "127.0.0.1:8000"
 	// "https://nelson2017-8.github.io"
 	direccion := "localhost:3000"
-	//http.ListenAndServe(direccion, enrutador)
+	fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
+	http.ListenAndServe(direccion, enrutador)
+	
 
-	servidor := &http.Server{
+	/**servidor := &http.Server{
 		Handler: enrutador,
 		Addr:    direccion,
 		// Timeouts para evitar que el servidor se quede "colgado" por siempre
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
-	}
+	}**/
 
-	fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
-	log.Fatal(servidor.ListenAndServe())
+	
+	//log.Fatal(servidor.ListenAndServe())
 }
