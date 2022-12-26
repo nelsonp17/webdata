@@ -11,7 +11,7 @@ import (
 
 func Init() {
 	//GetArray(env)
-	host := "https://nelson2017-8.github.io/"
+	host := "https://nelson2017-8.github.io"
 	port := "80"
 	// Crear el enrutador y definir las rutas en la función definirRutas
 	enrutador := mux.NewRouter()
