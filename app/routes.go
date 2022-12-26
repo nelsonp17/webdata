@@ -6,5 +6,5 @@ import (
 )
 
 func Routes(route *mux.Router) {
-	route.HandleFunc("/", controllers.PromedioView).Methods("GET")
+	route.HandleFunc("/dollar", controllers.PromedioView).Methods("GET")
 }
