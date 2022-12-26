@@ -6,7 +6,7 @@ import (
 	//"github.com/Nelson2017-8/webdata/app/controllers"
 	//"log"
 	"net/http"
-	//"time"
+	"time"
 )
 
 func Init() {
@@ -23,15 +23,15 @@ func Init() {
 	// Dirección del servidor. En este caso solo indicamos el puerto
 	// pero podría ser algo como "127.0.0.1:8000"
 	direccion := "https://nelson2017-8.github.io"
-	http.ListenAndServe(direccion, enrutador)
+	//http.ListenAndServe(direccion, enrutador)
 
-	/**servidor := &http.Server{
+	servidor := &http.Server{
 		Handler: enrutador,
 		Addr:    direccion,
 		// Timeouts para evitar que el servidor se quede "colgado" por siempre
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
-	}**/
+	}
 
 	//fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
 	//log.Fatal(servidor.ListenAndServe())
