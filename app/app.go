@@ -1,18 +1,16 @@
 package app
 
 import (
-	"fmt"
+	//"fmt"
 	"github.com/gorilla/mux"
 	//"github.com/Nelson2017-8/webdata/app/controllers"
-	"log"
+	//"log"
 	"net/http"
 	"time"
 )
 
 func Init() {
 	//GetArray(env)
-	host := "https://nelson2017-8.github.io"
-	port := "80"
 	// Crear el enrutador y definir las rutas en la función definirRutas
 	enrutador := mux.NewRouter()
 	Routes(enrutador)
@@ -24,17 +22,17 @@ func Init() {
 
 	// Dirección del servidor. En este caso solo indicamos el puerto
 	// pero podría ser algo como "127.0.0.1:8000"
-	direccion := host + ":" + port
-	//http.ListenAndServe(direccion, enrutador)
+	direccion := "https://nelson2017-8.github.io"
+	http.ListenAndServe(direccion, enrutador)
 
-	servidor := &http.Server{
+	/**servidor := &http.Server{
 		Handler: enrutador,
 		Addr:    direccion,
 		// Timeouts para evitar que el servidor se quede "colgado" por siempre
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
-	}
+	}**/
 
-	fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
-	log.Fatal(servidor.ListenAndServe())
+	//fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
+	//log.Fatal(servidor.ListenAndServe())
 }
