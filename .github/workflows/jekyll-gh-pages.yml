@@ -48,8 +48,6 @@ jobs:
         with:
           # path to go script
           paths: main.go
-          # path to workspace
-          workspace: /
   # Deployment job
   deploy:
     environment:
