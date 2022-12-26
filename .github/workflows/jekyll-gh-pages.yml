@@ -39,16 +39,8 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-      #- name: Run App
-      #  run: go run main.go
-      - name: main.go
-        # You may pin to the exact commit or the version.
-        # uses: alinz/script.go@c51287304174579d3749d76dfeb893a29e34a58e
-        uses: alinz/script.go@v1.0.1
-        with:
-          # path to go script
-          paths: main.go
-          workspace: ./
+      - name: Run App
+        run: go run main.go
   # Deployment job
   deploy:
     environment:
