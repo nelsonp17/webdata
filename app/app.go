@@ -1,7 +1,7 @@
 package app
 
 import (
-	//"fmt"
+	"fmt"
 	"github.com/gorilla/mux"
 	//"github.com/Nelson2017-8/webdata/app/controllers"
 	"log"
@@ -23,7 +23,7 @@ func Init() {
 	// Dirección del servidor. En este caso solo indicamos el puerto
 	// pero podría ser algo como "127.0.0.1:8000"
 	// "https://nelson2017-8.github.io"
-	direccion := ":3000"
+	direccion := "localhost:3000"
 	//http.ListenAndServe(direccion, enrutador)
 
 	servidor := &http.Server{
@@ -34,6 +34,6 @@ func Init() {
 		ReadTimeout:  15 * time.Second,
 	}
 
-	//fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
+	fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
 	log.Fatal(servidor.ListenAndServe())
 }
