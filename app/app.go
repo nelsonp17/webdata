@@ -21,7 +21,8 @@ func Init() {
 	//enrutador.PathPrefix("/public/node_modules/").Handler(http.StripPrefix("/public/node_modules/", http.FileServer(http.Dir("./public/node_modules"))))
 
 	// Dirección del servidor. En este caso solo indicamos el puerto
-	// pero podría ser algo como "127.0.0.1:8000" "https://nelson2017-8.github.io"
+	// pero podría ser algo como "127.0.0.1:8000"
+	// "https://nelson2017-8.github.io"
 	direccion := ":3000"
 	//http.ListenAndServe(direccion, enrutador)
 
