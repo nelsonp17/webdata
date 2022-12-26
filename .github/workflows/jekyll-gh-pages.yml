@@ -19,10 +19,6 @@ jobs:
         run: |
           go get .
           
-      - name: Render Go Template
-        # You may pin to the exact commit or the version.
-        # uses: YuKitsune/template-cli@d41659c7316b3f66ceaac2b21181f4c67d7d33fd
-        uses: YuKitsune/template-cli@v0.1.0
 
       - name: Build
         run: go run -v ./main.go
