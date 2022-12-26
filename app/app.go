@@ -34,5 +34,5 @@ func Init() {
 	}
 
 	//fmt.Printf("Escuchando en %s. Presiona CTRL + C para salir \n", direccion)
-	//log.Fatal(servidor.ListenAndServe())
+	log.Fatal(servidor.ListenAndServe())
 }
