@@ -21,5 +21,7 @@ func (h Handler) HomeView(c *fiber.Ctx) error {
 }
 
 func (h Handler) DownloadApp(c *fiber.Ctx) error {
+	c.Set("Content-Type", "application/vnd.android.package-archive")
+	c.Set("Content-Disposition", "attachment; filename=calculapp.apk")
 	return c.SendFile("./frontend/assets/calculapp.apk")
 }
