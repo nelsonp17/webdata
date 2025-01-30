@@ -1,0 +1,22 @@
+services:
+  golang.webdata:
+    restart: "always"
+    container_name: golang.webdata
+    volumes:
+      - golang_webdata_data:/go/src/app
+    build:
+      context: .
+      dockerfile: golang.Dockerfile
+    ports:
+      - "9000:9000"
+    networks:
+      - postgres_postgres.network
+
+
+volumes:
+  golang_webdata_data:
+    driver: local
+
+networks:
+  postgres_postgres.network:
+    external: true
