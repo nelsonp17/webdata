@@ -3,19 +3,20 @@ services:
     restart: "always"
     container_name: golang.webdata
     volumes:
-      - golang_webdata_data:/go/src/app
+      - .:/app
     build:
       context: .
       dockerfile: golang.Dockerfile
     ports:
-      - "9000:9000"
+      - "9001:9001"
     networks:
       - postgres_postgres.network
-
-
-volumes:
-  golang_webdata_data:
-    driver: local
+#    cap_add:
+#      - SYS_ADMIN
+#    security_opt:
+#      - seccomp:unconfined
+#    environment:
+#      - CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 networks:
   postgres_postgres.network:

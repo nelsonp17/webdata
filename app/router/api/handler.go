@@ -27,6 +27,23 @@ const BCV = "https://www.bcv.org.ve/"
 
 func ScrapingMonitorDolar() ([]schemas.History, error) {
 
+	//execPath := os.Getenv("CHROMIUM_EXECUTABLE_PATH")
+	//if execPath == "" {
+	//	execPath = "/usr/bin/chromium-browser" // Default path
+	//}
+	//
+	//opts := append(chromedp.DefaultExecAllocatorOptions[:], chromedp.ExecPath(execPath))
+	//allocCtx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
+	//defer cancel()
+	//
+	//// Create a new chromedp context from the allocator context
+	//ctx, cancel := chromedp.NewContext(allocCtx)
+	//defer cancel()
+	//
+	//// Set a timeout for the context
+	//ctx, cancel = context.WithTimeout(ctx, 60*time.Second)
+	//defer cancel()
+
 	ctx, cancel := chromedp.NewContext(context.Background())
 	defer cancel()
 
@@ -280,28 +297,28 @@ func (h *Handler) GetPriceDollar(c *fiber.Ctx) error {
 		fmt.Println("failed to serialize response monitorDolar:", err)
 		return c.Status(fiber.StatusInternalServerError).SendString("failed to serialize response monitorDolar")
 	}
-	bcv, err := GetBcv(h.Repo)
-	if err != nil {
-		fmt.Println("failed to serialize response bcv:", err)
-		return c.Status(fiber.StatusInternalServerError).SendString("failed to serialize response bcv")
-	}
+	//bcv, err := GetBcv(h.Repo)
+	//if err != nil {
+	//	fmt.Println("failed to serialize response bcv:", err)
+	//	return c.Status(fiber.StatusInternalServerError).SendString("failed to serialize response bcv")
+	//}
 
 	var clearMonitorDolar []schemas.History
-	var clearBcv []schemas.History
+	//var clearBcv []schemas.History
 	for _, data := range monitorDolar {
 		if data.ID > 0 {
 			clearMonitorDolar = append(clearMonitorDolar, data)
 		}
 	}
-	for _, data := range bcv {
-		if data.ID > 0 {
-			clearBcv = append(clearBcv, data)
-		}
-	}
+	//for _, data := range bcv {
+	//	if data.ID > 0 {
+	//		clearBcv = append(clearBcv, data)
+	//	}
+	//}
 	response := constant.Response{
 		Data: fiber.Map{
 			"MonitorDolar": clearMonitorDolar,
-			"BCV":          clearBcv,
+			//"BCV":          clearBcv,
 		},
 	}
 

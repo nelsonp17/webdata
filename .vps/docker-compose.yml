@@ -1,0 +1,23 @@
+services:
+  golang.webdata:
+    restart: "always"
+    container_name: golang.webdata
+    volumes:
+      - .:/app
+    build:
+      context: .
+      dockerfile: golang.Dockerfile
+    ports:
+      - "9001:9001"
+    networks:
+      - postgres_postgres.network
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+networks:
+  postgres_postgres.network:
+    external: true

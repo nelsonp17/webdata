@@ -7,3 +7,4 @@
 storage/debugbar
 /.docker
 /tmp
+/nodejs
